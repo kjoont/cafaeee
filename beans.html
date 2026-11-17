@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>계절별 원두 추천 | 커피숖</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css"></head>
+<body><header>
+<a class="brand" href="index.html">COFFEE SHOP</a>
+<nav aria-label="주요 메뉴">
+<details class="nav-group" name="navigation"><summary>커피숖</summary><div class="dropdown"><a href="index.html">메인</a></div></details>
+<details class="nav-group" name="navigation"><summary>메뉴</summary><div class="dropdown"><a href="menu.html">전체 메뉴</a><a href="compare.html">영양성분 비교</a><a href="order.html">금액 확인</a></div></details>
+<a class="nav-beans-link" href="beans.html" aria-current="page">원두 설명</a>
+<details class="nav-group" name="navigation"><summary>매장 안내</summary><div class="dropdown"><a href="store.html">매장찾기</a></div></details>
+</nav></header>
+<section class="banner"><div><h1>계절별 원두 추천</h1><p>오늘의 계절과 취향에 어울리는 커피를 찾아보세요.</p></div></section>
+<main id="beans-page">
+<section><h2>계절에 맞는 원두 찾기</h2><p class="bean-intro">대표적인 커피 산지 10곳의 원두를 소개합니다. 계절을 선택하면 어울리는 향미의 원두만 표시됩니다. JavaScript 없이 HTML 라디오 버튼과 CSS 선택자로 구현했습니다.</p>
+<fieldset class="bean-season-controls"><legend>계절 선택</legend><label><input type="radio" id="season-all" name="season" value="all" >전체 원두</label><label><input type="radio" id="season-spring" name="season" value="spring" >🌸 봄</label><label><input type="radio" id="season-summer" name="season" value="summer" >☀️ 여름</label><label><input type="radio" id="season-autumn" name="season" value="autumn" checked>🍂 가을</label><label><input type="radio" id="season-winter" name="season" value="winter" >❄️ 겨울</label></fieldset>
+<div class="bean-season-summary" aria-live="off"><div class="summary-item summary-all"><strong>대표 원두 10가지</strong><p>세계 여러 산지에서 생산되는 대표 원두들의 일반적인 향미를 살펴보세요.</p></div><div class="summary-item summary-spring"><strong>봄에는 꽃향기와 산뜻한 산미</strong><p>화사한 꽃향기, 가벼운 과일향, 균형 잡힌 단맛을 중심으로 추천해요.</p></div><div class="summary-item summary-summer"><strong>여름에는 과일향과 청량한 느낌</strong><p>시트러스와 베리처럼 산뜻한 느낌의 원두를 아이스로 즐겨 보세요.</p></div><div class="summary-item summary-autumn"><strong>가을에는 고소함과 달콤한 여운</strong><p>캐러멜과 견과류, 코코아처럼 포근한 향미가 어울립니다.</p></div><div class="summary-item summary-winter"><strong>겨울에는 진하고 따뜻한 풍미</strong><p>초콜릿과 향신료, 묵직한 바디를 가진 원두를 따뜻하게 즐겨 보세요.</p></div></div>
+<div class="bean-cards"><article class="bean-card" data-seasons="autumn winter">
+<div class="bean-region">BRAZIL</div>
+<h3>브라질</h3>
+<p class="bean-taste"><strong>대표 향미</strong> · 초콜릿 · 견과류 · 캐러멜</p>
+<p class="bean-note">구수하고 부드러워 라테나 에스프레소에도 어울립니다.</p>
+<div class="season-reason">초콜릿 같은 고소함으로 선선한 계절에 포근하게 즐기기 좋아요.</div>
+<div class="bean-tags"><span>고소함</span><span>낮은 산미</span></div>
+</article>
+<article class="bean-card" data-seasons="spring autumn">
+<div class="bean-region">COLOMBIA</div>
+<h3>콜롬비아</h3>
+<p class="bean-taste"><strong>대표 향미</strong> · 캐러멜 · 코코아 · 은은한 과일</p>
+<p class="bean-note">산미와 단맛의 균형을 찾는 분께 권합니다.</p>
+<div class="season-reason">봄에는 균형 잡힌 산뜻함, 가을에는 달콤한 여운을 느껴 보세요.</div>
+<div class="bean-tags"><span>균형감</span><span>중간 바디</span></div>
+</article>
+<article class="bean-card" data-seasons="spring summer">
+<div class="bean-region">ETHIOPIA</div>
+<h3>에티오피아</h3>
+<p class="bean-taste"><strong>대표 향미</strong> · 자스민 · 베리 · 감귤</p>
+<p class="bean-note">꽃향기와 과일향이 특징적으로 나타나는 커피가 많습니다.</p>
+<div class="season-reason">꽃처럼 화사한 향으로 봄을, 과일 같은 향으로 여름 아이스를 즐겨 보세요.</div>
+<div class="bean-tags"><span>꽃향</span><span>과일향</span></div>
+</article>
+<article class="bean-card" data-seasons="spring summer">
+<div class="bean-region">KENYA</div>
+<h3>케냐</h3>
+<p class="bean-taste"><strong>대표 향미</strong> · 블랙커런트 · 베리 · 시트러스</p>
+<p class="bean-note">선명한 과일 산미를 선호한다면 좋은 출발점입니다.</p>
+<div class="season-reason">산뜻한 과일 산미가 봄·여름의 가벼운 한 잔에 잘 어울려요.</div>
+<div class="bean-tags"><span>밝은 산미</span><span>과일향</span></div>
+</article>
+<article class="bean-card" data-seasons="autumn winter">
+<div class="bean-region">GUATEMALA</div>
+<h3>과테말라</h3>
+<p class="bean-taste"><strong>대표 향미</strong> · 코코아 · 캐러멜 · 향신료</p>
+<p class="bean-note">깊은 단맛과 균형 잡힌 풍미를 기대할 수 있습니다.</p>
+<div class="season-reason">따뜻하게 내렸을 때 코코아와 향신료 느낌을 즐겨 보세요.</div>
+<div class="bean-tags"><span>코코아</span><span>묵직함</span></div>
+</article>
+<article class="bean-card" data-seasons="spring summer">
+<div class="bean-region">COSTA RICA</div>
+<h3>코스타리카</h3>
+<p class="bean-taste"><strong>대표 향미</strong> · 감귤 · 꿀 · 깨끗한 단맛</p>
+<p class="bean-note">깔끔한 끝맛과 맑은 향미를 좋아하는 분께 어울립니다.</p>
+<div class="season-reason">봄날의 산뜻한 향과 여름의 청량한 커피를 연상시켜요.</div>
+<div class="bean-tags"><span>깔끔함</span><span>상큼함</span></div>
+</article>
+<article class="bean-card" data-seasons="autumn winter">
+<div class="bean-region">SUMATRA · INDONESIA</div>
+<h3>인도네시아 수마트라</h3>
+<p class="bean-taste"><strong>대표 향미</strong> · 허브 · 흙내음 · 스파이스</p>
+<p class="bean-note">묵직한 바디와 낮은 톤의 풍미를 좋아한다면 추천합니다.</p>
+<div class="season-reason">쌀쌀한 날에 깊고 진한 풍미를 천천히 음미해 보세요.</div>
+<div class="bean-tags"><span>진한 바디</span><span>허브</span></div>
+</article>
+<article class="bean-card" data-seasons="spring autumn">
+<div class="bean-region">HONDURAS</div>
+<h3>온두라스</h3>
+<p class="bean-taste"><strong>대표 향미</strong> · 견과류 · 복숭아 · 캐러멜</p>
+<p class="bean-note">부드러운 단맛과 과일 느낌을 두루 만날 수 있습니다.</p>
+<div class="season-reason">봄에는 달콤한 과일 느낌, 가을에는 견과류의 고소함을 즐겨요.</div>
+<div class="bean-tags"><span>부드러움</span><span>은은한 과일</span></div>
+</article>
+<article class="bean-card" data-seasons="autumn winter">
+<div class="bean-region">PERU</div>
+<h3>페루</h3>
+<p class="bean-taste"><strong>대표 향미</strong> · 아몬드 · 초콜릿 · 부드러운 과일</p>
+<p class="bean-note">부담스럽지 않은 산미와 균형감이 장점인 경우가 많습니다.</p>
+<div class="season-reason">아몬드와 초콜릿 같은 포근한 향미로 추천합니다.</div>
+<div class="bean-tags"><span>아몬드</span><span>균형감</span></div>
+</article>
+<article class="bean-card" data-seasons="winter summer">
+<div class="bean-region">MEXICO</div>
+<h3>멕시코</h3>
+<p class="bean-taste"><strong>대표 향미</strong> · 초콜릿 · 견과류 · 브라운슈거</p>
+<p class="bean-note">은은한 고소함과 단맛을 좋아하는 분께 알맞습니다.</p>
+<div class="season-reason">겨울에는 핫커피로, 여름에는 부드러운 아이스커피로 즐겨 보세요.</div>
+<div class="bean-tags"><span>고소함</span><span>부드러운 단맛</span></div>
+</article></div>
+<div class="bean-info"><p><strong>안내</strong> · 추천 계절은 수확철이나 객관적인 등급이 아니라 향미를 바탕으로 한 취향 제안입니다. 같은 산지라도 품종·가공·로스팅·추출 방식에 따라 맛이 달라집니다.</p><p>참고 자료: <a href="https://www.aboutcoffee.org/origins/coffee-regions-of-the-world/" target="_blank" rel="noopener noreferrer">National Coffee Association — Coffee Regions</a> · <a href="https://homecoffee.org/pages/coffee-origin-guide" target="_blank" rel="noopener noreferrer">Coffee Origin Guide</a></p></div>
+</section></main><footer>커피숖</footer></body></html>

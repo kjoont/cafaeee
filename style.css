@@ -610,3 +610,112 @@ main:has(#area option[value="f5"]:checked) #stores .store2 { display: flex; }
     outline: 2px solid #795038;
     outline-offset: 3px;
 }
+
+
+/* ===== 계절별 원두 추천: 기존 크림/브라운 디자인 계승 ===== */
+.bean-intro{color:#6d5748;max-width:750px;margin-bottom:20px;}
+.bean-season-controls{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:15px 0 22px;padding:0;border:0;}
+.bean-season-controls legend{font-weight:700;margin-bottom:10px;padding:0;}
+.bean-season-controls label{position:relative;display:block;cursor:pointer;text-align:center;border-radius:10px;padding:13px 5px;background:#eee3d6;color:#5f4636;border:1px solid #dacbbd;transition:background .2s,transform .2s;}
+.bean-season-controls label:hover{transform:translateY(-2px);background:#e6d5c3;}
+.bean-season-controls input{position:absolute;width:1px;height:1px;opacity:0;}
+.bean-season-controls label:has(input:checked){background:#593b2c;color:#fff;border-color:#593b2c;box-shadow:0 3px 10px #3c302821;}
+.bean-season-controls label:has(input:focus-visible){outline:3px solid #b77d52;outline-offset:2px;}
+.bean-season-summary{padding:20px 22px;background:#f3eadb;border-left:5px solid #74432f;border-radius:7px;margin-bottom:18px;}
+.bean-season-summary p{margin:5px 0 0;color:#6d5748;}
+.bean-season-summary .summary-item{display:none;}
+#beans-page:has(#season-all:checked) .summary-all,
+#beans-page:has(#season-spring:checked) .summary-spring,
+#beans-page:has(#season-summer:checked) .summary-summer,
+#beans-page:has(#season-autumn:checked) .summary-autumn,
+#beans-page:has(#season-winter:checked) .summary-winter{display:block;}
+.bean-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;}
+.bean-card{background:#fff;border:1px solid #d8cbbd;border-radius:11px;padding:22px;display:flex;flex-direction:column;gap:9px;transition:transform .2s,box-shadow .2s;}
+.bean-card:hover{transform:translateY(-3px);box-shadow:0 8px 18px #50382918;}
+.bean-card h3{font-size:19px;margin:0;}
+.bean-card .bean-region{font-size:12px;letter-spacing:.8px;color:#967b66;font-weight:700;}
+.bean-card .bean-taste{margin:0;color:#664e3f;}
+.bean-card .bean-note{font-size:13px;color:#6e5b4e;margin:0;line-height:1.6;}
+.bean-card .bean-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:9px;}
+.bean-card .bean-tags span{background:#f2e9dd;color:#71503d;border-radius:30px;padding:3px 9px;font-size:12px;}
+.bean-card .season-reason{background:#f9f3eb;border-radius:7px;padding:10px;font-size:13px;color:#594330;}
+#beans-page:has(#season-spring:checked) .bean-card:not([data-seasons~="spring"]),
+#beans-page:has(#season-summer:checked) .bean-card:not([data-seasons~="summer"]),
+#beans-page:has(#season-autumn:checked) .bean-card:not([data-seasons~="autumn"]),
+#beans-page:has(#season-winter:checked) .bean-card:not([data-seasons~="winter"]){display:none;}
+.bean-info{font-size:13px;background:#f5eee4;border-radius:8px;padding:14px 18px;color:#745f51;margin-top:22px;}
+.bean-info p{margin:4px 0;}
+.bean-info a{color:#694632;}
+@media(max-width:650px){.bean-cards{grid-template-columns:1fr;}.bean-season-controls{grid-template-columns:repeat(3,1fr);}}
+
+/* 상단 메뉴의 독립 원두 설명 링크: 다른 메뉴와 같은 색감과 높이 */
+.nav-beans-link {
+    display: flex; align-items: center; padding: 18px; color: white;
+    text-decoration: none; margin: 0; white-space: nowrap;
+}
+.nav-beans-link:hover, .nav-beans-link[aria-current="page"] { background: #4a3932; color: #fff; }
+@media (max-width: 650px) { .nav-beans-link { padding: 10px; } }
+
+/* 메인 핵심 기능 바로가기: 원래의 3개 카드 유지 */
+.shortcuts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.shortcuts a { min-width: 0; }
+.shortcuts .icon i { font-size: 32px; line-height: 1; }
+@media (max-width: 650px) {
+    .shortcuts { grid-template-columns: 1fr; }
+}
+
+
+/* ===== 원두 카드: 기본은 산지명만, 마우스를 올리면 상세 설명 표시 ===== */
+/* Grid에서 옆 카드까지 늘어나지 않게 상단 정렬 */
+#beans-page .bean-cards {
+    align-items: start;
+}
+
+#beans-page .bean-card {
+    gap: 6px;
+    min-width: 0;
+    padding: 20px 22px;
+}
+
+/* 처음에는 BRAZIL / 브라질 같은 제목만 보임 */
+#beans-page .bean-card .bean-taste,
+#beans-page .bean-card .bean-note,
+#beans-page .bean-card .season-reason,
+#beans-page .bean-card .bean-tags {
+    display: none;
+}
+
+/* 카드에 마우스를 올리거나, 카드 내부에 키보드 포커스가 있으면 상세 표시 */
+#beans-page .bean-card:hover .bean-taste,
+#beans-page .bean-card:hover .bean-note,
+#beans-page .bean-card:hover .season-reason,
+#beans-page .bean-card:hover .bean-tags,
+#beans-page .bean-card:focus-within .bean-taste,
+#beans-page .bean-card:focus-within .bean-note,
+#beans-page .bean-card:focus-within .season-reason,
+#beans-page .bean-card:focus-within .bean-tags {
+    display: block;
+}
+
+/* 상세 내용 사이 간격 */
+#beans-page .bean-card:hover .bean-taste,
+#beans-page .bean-card:focus-within .bean-taste {
+    margin-top: 10px;
+}
+
+#beans-page .bean-card:hover .bean-tags,
+#beans-page .bean-card:focus-within .bean-tags {
+    display: flex;
+}
+
+/* 터치 기기에서는 hover가 불안정해 설명을 기본 표시 */
+@media (hover: none) {
+    #beans-page .bean-card .bean-taste,
+    #beans-page .bean-card .bean-note,
+    #beans-page .bean-card .season-reason {
+        display: block;
+    }
+    #beans-page .bean-card .bean-tags {
+        display: flex;
+    }
+}
