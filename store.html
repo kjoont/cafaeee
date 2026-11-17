@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>매장 안내 | 온도커피</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- 상단 바: 하위 메뉴를 누르면 별도의 HTML 페이지로 이동한다. -->
+    <header>
+        <a class="brand" href="index.html">COFFEE SHOP</a>
+        <nav aria-label="주요 메뉴">
+            <details class="nav-group" name="navigation">
+                <summary>커피숖</summary>
+                <div class="dropdown">
+                    <a href="index.html">메인</a>
+                </div>
+            </details>
+            <details class="nav-group" name="navigation">
+                <summary>메뉴</summary>
+                <div class="dropdown">
+                    <a href="menu.html">전체 메뉴</a>
+                    <a href="compare.html">영양성분 비교</a>
+                    <a href="order.html">금액 확인</a>
+                </div>
+            </details>
+            <details class="nav-group" name="navigation">
+                <summary>매장 안내</summary>
+                <div class="dropdown">
+                    <a href="store.html">매장찾기</a>
+                </div>
+            </details>
+        </nav>
+    </header>
+    <section class="banner">
+        <div>
+            <h1>매장찾기</h1>
+            <p>매장을 찾아보세요</p>
+        </div>
+    </section>
+    <main>
+<label for="area">지역 또는 매장명</label> <select id="area"><option value="f0">전체</option><option value="f1">안양</option><option value="f2">서울</option><option value="f3">캠퍼스점</option><option value="f4">범계점</option><option value="f5">망원점</option></select>
+<p class="count f0">검색 결과 3곳</p>
+<p class="count f1">검색 결과 2곳</p>
+<p class="count f2">검색 결과 1곳</p>
+<p class="count f3">검색 결과 1곳</p>
+<p class="count f4">검색 결과 1곳</p>
+<p class="count f5">검색 결과 1곳</p>
+<div class="cards" id="stores">
+<article class="store0"><h2>캠퍼스점</h2><p>안양 · 학생회관 1층</p><p>월–금 09:00–18:00</p></article>
+<article class="store1"><h2>범계점</h2><p>안양 · 범계역 광장</p><p>매일 10:00–21:00</p></article>
+<article class="store2"><h2>망원점</h2><p>서울 · 망원동</p><p>화–일 10:00–20:00</p></article></div>
+    </main>
+    <footer>커피숖</footer>
+</body>
+</html>

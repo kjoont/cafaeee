@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>홈 | 커피숖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 상단 바: 하위 메뉴를 누르면 별도의 HTML 페이지로 이동한다. -->
+    <header>
+        <a class="brand" href="index.html">COFFEE SHOP</a>
+        <nav aria-label="주요 메뉴">
+            <details class="nav-group" name="navigation">
+                <summary>커피숖</summary>
+                <div class="dropdown">
+                    <a href="index.html">메인</a>
+                </div>
+            </details>
+            <details class="nav-group" name="navigation">
+                <summary>메뉴</summary>
+                <div class="dropdown">
+                    <a href="menu.html">전체 메뉴</a>
+                    <a href="compare.html">영양성분 비교</a>
+                    <a href="order.html">금액 확인</a>
+                </div>
+            </details>
+            <details class="nav-group" name="navigation">
+                <summary>매장 안내</summary>
+                <div class="dropdown">
+                    <a href="store.html">매장찾기</a>
+                </div>
+            </details>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div>
+            <span class="badge">AUTUMN LIMITED</span>
+            <h1>커피숖</h1>
+            <p>맛있는 커피</p>
+            <a class="cta" href="menu.html">메뉴 보러 가기</a>
+        </div>
+    </section>
+
+    <main>
+        <!-- 브랜드 소개 -->
+        <section class="intro">
+            <h1>커피숖</h1>
+            <p>커피, 베이커리, 스무디<br>
+              다양한 메뉴 판매중 </p>
+        </section>
+
+        <!-- 바로가기 카드 -->
+        <section>
+            <h2>둘러보기</h2>
+            <div class="shortcuts">
+                <a href="menu.html">
+                    <span class="icon">☕</span>
+                    <strong>전체 메뉴</strong>
+                    <small>커피부터 스무디까지</small>
+                </a>
+                <a href="compare.html">
+                    <span class="icon">📊</span>
+                    <strong>영양성분 비교</strong>
+                    <small>두 메뉴를 나란히 비교</small>
+                </a>
+                <a href="store.html">
+                    <span class="icon">📍</span>
+                    <strong>매장 찾기</strong>
+                    <small>가까운 매장 확인</small>
+                </a>
+            </div>
+        </section>
+
+        <!-- 추천 메뉴 -->
+        <section>
+            <h2>이달의 추천 메뉴</h2>
+            <div class="picks">
+                <div class="pick">
+                    <img src="images/chestnut-latte.jpg" alt="밤 라테">
+                    <h3>밤 라테</h3>
+                    <p>밤 크림 올라간 카페라떼</p>
+                    <strong>5,500원</strong>
+                </div>
+                <div class="pick">
+                    <img src="images/cafe-latte.jpg" alt="카페라테">
+                    <h3>카페라테</h3>
+                    <p>우유 넣은 커피</p>
+                    <strong>4,500원</strong>
+                </div>
+                <div class="pick">
+                    <img src="images/strawberry-smoothie.jpg" alt="딸기 요거트 스무디">
+                    <h3>딸기 요거트 스무디</h3>
+                    <p>딸기와 요거트를 넣은 스무디</p>
+                    <strong>5,600원</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>커피숖</footer>
+</body>
+</html>

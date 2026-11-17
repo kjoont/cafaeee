@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>메뉴 | 온도커피</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 상단 바: 하위 메뉴를 누르면 별도의 HTML 페이지로 이동한다. -->
+    <header>
+        <a class="brand" href="index.html">COFFEE SHOP</a>
+        <nav aria-label="주요 메뉴">
+            <details class="nav-group" name="navigation">
+                <summary>커피숖</summary>
+                <div class="dropdown">
+                    <a href="index.html">메인</a>
+                </div>
+            </details>
+            <details class="nav-group" name="navigation">
+                <summary>메뉴</summary>
+                <div class="dropdown">
+                    <a href="menu.html">전체 메뉴</a>
+                    <a href="compare.html">영양성분 비교</a>
+                    <a href="order.html">금액 확인</a>
+                </div>
+            </details>
+            <details class="nav-group" name="navigation">
+                <summary>매장 안내</summary>
+                <div class="dropdown">
+                    <a href="store.html">매장찾기</a>
+                </div>
+            </details>
+        </nav>
+    </header>
+    <section class="banner">
+        <div>
+            <h1>커피숖의 메뉴</h1>
+            <p>커피, 스무디, 베이커리 등등 </p>
+        </div>
+    </section>
+    <main>
+        <section id="menu">
+            <h2>메뉴 분류</h2>
+            <!-- 선택한 버튼의 분류에 맞는 메뉴 카드만 보여 준다. -->
+            <fieldset class="categories"><legend>분류 선택</legend>
+                <label><input type="radio" name="category" value="전체메뉴" checked> 전체메뉴</label>
+                <label><input type="radio" name="category" value="커피"> 커피</label>
+                <label><input type="radio" name="category" value="논커피"> 논커피</label>
+                <label><input type="radio" name="category" value="베이커리"> 베이커리</label>
+                <label><input type="radio" name="category" value="스무디"> 스무디</label>
+                <label><input type="radio" name="category" value="베버리지"> 베버리지</label>
+            </fieldset>
+            <a class="compare-button" href="compare.html">영양성분 비교하기</a>
+            <p>영양성분은 기본 음료 한 잔(350 mL) 또는 베이커리 한 개(80 g) 기준</p>
+            <div class="cards">
+                <!-- details 태그: 제목을 누르면 접혀 있던 영양성분 목록이 열린다. -->
+                <article data-category="커피">
+                    <img src="images/chestnut-latte.jpg" alt="밤 라테">
+                    <h3>밤 라테</h3>
+                    <p>밤 크림이 올라간 라떼</p>
+                    <strong>5,500원</strong>
+                    <details>
+                        <summary>영양성분 확인</summary>
+                        <ul>
+                            <li>열량 <span>285 kcal</span></li>
+                            <li>당류 <span>28 g</span></li>
+                            <li>단백질 <span>7 g</span></li>
+                            <li>카페인 <span>75 mg</span></li>
+                        </ul>
+                    </details>
+                </article>
+                <article data-category="커피">
+                    <img src="images/americano.jpg" alt="아메리카노">
+                    <h3>아메리카노</h3>
+                    <p>기본중에 기본</p>
+                    <strong>3,500원</strong>
+                    <details>
+                        <summary>영양성분 확인</summary>
+                        <ul>
+                            <li>열량 <span>10 kcal</span></li>
+                            <li>당류 <span>0 g</span></li>
+                            <li>단백질 <span>1 g</span></li>
+                            <li>카페인 <span>150 mg</span></li>
+                        </ul>
+                    </details>
+                </article>
+                <article data-category="커피">
+                    <img src="images/cafe-latte.jpg" alt="카페라테">
+                    <h3>카페라테</h3>
+                    <p>커피에 우유</p>
+                    <strong>4,500원</strong>
+                    <details>
+                        <summary>영양성분 확인</summary>
+                        <ul>
+                            <li>열량 <span>160 kcal</span></li>
+                            <li>당류 <span>11 g</span></li>
+                            <li>단백질 <span>8 g</span></li>
+                            <li>카페인 <span>75 mg</span></li>
+                        </ul>
+                    </details>
+                </article>
+                <article data-category="논커피">
+                    <img src="images/matcha-milk.jpg" alt="말차 밀크">
+                    <h3>말차 밀크</h3>
+                    <p>말차에 우유</p>
+                    <strong>5,000원</strong>
+                    <details>
+                        <summary>영양성분 확인</summary>
+                        <ul>
+                            <li>열량 <span>210 kcal</span></li>
+                            <li>당류 <span>22 g</span></li>
+                            <li>단백질 <span>7 g</span></li>
+                            <li>카페인 <span>40 mg</span></li>
+                        </ul>
+                    </details>
+                </article>
+                <article data-category="논커피">
+                    <img src="images/yuja-tea.jpg" alt="유자차">
+                    <h3>유자차</h3>
+                    <p>유자청에 따뜻한 차</p>
+                    <strong>4,200원</strong>
+                    <details>
+                        <summary>영양성분 확인</summary>
+                        <ul>
+                            <li>열량 <span>130 kcal</span></li>
+                            <li>당류 <span>30 g</span></li>
+                            <li>단백질 <span>0 g</span></li>
+                            <li>카페인 <span>0 mg</span></li>
+                        </ul>
+                    </details>
+                </article>
+                <article data-category="베이커리">
+                    <img src="images/butter-scone.jpg" alt="버터 스콘">
+                    <h3>버터 스콘</h3>
+                    <p>고소한 스콘</p>
+                    <strong>3,200원</strong>
+                    <details>
+                        <summary>영양성분 확인</summary>
+                        <ul>
+                            <li>열량 <span>320 kcal</span></li>
+                            <li>당류 <span>8 g</span></li>
+                            <li>단백질 <span>5 g</span></li>
+                            <li>카페인 <span>0 mg</span></li>
+                        </ul>
+                    </details>
+                </article>
+                <article data-category="스무디">
+                    <img src="images/strawberry-smoothie.jpg" alt="딸기 요거트 스무디">
+                    <h3>딸기 요거트 스무디</h3>
+                    <p>요거트에 딸기</p>
+                    <strong>5,600원</strong>
+                    <details>
+                        <summary>영양성분 확인</summary>
+                        <ul>
+                            <li>열량 <span>245 kcal</span></li>
+                            <li>당류 <span>32 g</span></li>
+                            <li>단백질 <span>5 g</span></li>
+                            <li>카페인 <span>0 mg</span></li>
+                        </ul>
+                    </details>
+                </article>
+                <article data-category="스무디">
+                    <img src="images/mango-smoothie.jpg" alt="망고 스무디">
+                    <h3>망고 스무디</h3>
+                    <p>망고에 얼음</p>
+                    <strong>5,400원</strong>
+                    <details>
+                        <summary>영양성분 확인</summary>
+                        <ul>
+                            <li>열량 <span>210 kcal</span></li>
+                            <li>당류 <span>36 g</span></li>
+                            <li>단백질 <span>1 g</span></li>
+                            <li>카페인 <span>0 mg</span></li>
+                        </ul>
+                    </details>
+                </article>
+                <article data-category="스무디">
+                    <img src="images/blueberry-smoothie.jpg" alt="블루베리 스무디">
+                    <h3>블루베리 스무디</h3>
+                    <p>블루베리에 얼음</p>
+                    <strong>5,500원</strong>
+                    <details>
+                        <summary>영양성분 확인</summary>
+                        <ul>
+                            <li>열량 <span>225 kcal</span></li>
+                            <li>당류 <span>33 g</span></li>
+                            <li>단백질 <span>2 g</span></li>
+                            <li>카페인 <span>0 mg</span></li>
+                        </ul>
+                    </details>
+                </article>
+                <article data-category="베버리지">
+                            <img src="images/grapefruit-ade.jpg" alt="자몽 에이드">
+                            <h3>자몽 에이드</h3>
+                            <p>자몽에 사이다</p>
+                            <strong>4,900원</strong>
+                            <details>
+                                <summary>영양성분 확인</summary>
+                                <ul>
+                                    <li>열량 <span>155 kcal</span></li>
+                                    <li>당류 <span>30 g</span></li>
+                                    <li>단백질 <span>1 g</span></li>
+                                    <li>카페인 <span>0 mg</span></li>
+                                </ul>
+                            </details>
+                        </article>
+                        <article data-category="베버리지">
+                            <img src="images/lemon-soda.jpg" alt="레몬 소다">
+                            <h3>레몬 소다</h3>
+                            <p>레몬청에 사이다</p>
+                            <strong>4,700원</strong>
+                            <details>
+                                <summary>영양성분 확인</summary>
+                                <ul>
+                                    <li>열량 <span>140 kcal</span></li>
+                                    <li>당류 <span>29 g</span></li>
+                                    <li>단백질 <span>0 g</span></li>
+                                    <li>카페인 <span>0 mg</span></li>
+                                </ul>
+                            </details>
+                        </article>
+                        <article data-category="베버리지">
+                            <img src="images/peach-iced-tea.jpg" alt="복숭아 아이스티">
+                            <h3>복숭아 아이스티</h3>
+                            <p>복숭아 아이스티</p>
+                            <strong>4,300원</strong>
+                            <details>
+                                <summary>영양성분 확인</summary>
+                                <ul>
+                                    <li>열량 <span>125 kcal</span></li>
+                                    <li>당류 <span>26 g</span></li>
+                                    <li>단백질 <span>0 g</span></li>
+                                    <li>카페인 <span>18 mg</span></li>
+                                </ul>
+                            </details>
+                        </article>
+                        <article data-category="커피">
+                            <img src="images/vanilla-latte.jpg" alt="바닐라 라테">
+                            <h3>바닐라 라테</h3>
+                            <p>카페라떼에 바닐라 시럽</p>
+                            <strong>4,800원</strong>
+                            <details>
+                                <summary>영양성분 확인</summary>
+                                <ul>
+                                    <li>열량 <span>205 kcal</span></li>
+                                    <li>당류 <span>23 g</span></li>
+                                    <li>단백질 <span>7 g</span></li>
+                                    <li>카페인 <span>75 mg</span></li>
+                                </ul>
+                            </details>
+                        </article>
+                        <article data-category="베이커리">
+                            <img src="images/choco-muffin.jpg" alt="초코 머핀">
+                            <h3>초코 머핀</h3>
+                            <p>초콜릿 조각 머핀</p>
+                            <strong>3,500원</strong>
+                            <details>
+                                <summary>영양성분 확인</summary>
+                                <ul>
+                                    <li>열량 <span>330 kcal</span></li>
+                                    <li>당류 <span>24 g</span></li>
+                                    <li>단백질 <span>4 g</span></li>
+                                    <li>카페인 <span>0 mg</span></li>
+                                </ul>
+                            </details>
+                        </article>
+                    </div>
+                </section>
+    </main>
+    <footer>커피숍</footer>
+</body>
+</html>

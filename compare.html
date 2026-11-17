@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>영양성분 비교 | 커피숖</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- 상단 바: 하위 메뉴를 누르면 별도의 HTML 페이지로 이동한다. -->
+    <header>
+        <a class="brand" href="index.html">COFFEE SHOP</a>
+        <nav aria-label="주요 메뉴">
+            <details class="nav-group" name="navigation">
+                <summary>커피숖</summary>
+                <div class="dropdown">
+                    <a href="index.html">메인</a>
+                </div>
+            </details>
+            <details class="nav-group" name="navigation">
+                <summary>메뉴</summary>
+                <div class="dropdown">
+                    <a href="menu.html">전체 메뉴</a>
+                    <a href="compare.html">영양성분 비교</a>
+                    <a href="order.html">금액 확인</a>
+                </div>
+            </details>
+            <details class="nav-group" name="navigation">
+                <summary>매장 안내</summary>
+                <div class="dropdown">
+                    <a href="store.html">매장찾기</a>
+                </div>
+            </details>
+        </nav>
+    </header>
+    <section class="banner">
+        <div>
+            <h1>영양성분 비교</h1>
+            <p>비교할 메뉴 두 가지를 선택해 보세요.</p>
+        </div>
+    </section>
+    <main>
+<section id="comparison"><h2>메뉴별 비교표</h2><p>음료 350 mL 또는 베이커리 80 g 기준</p><table><thead><tr><th scope="col">항목</th><th scope="col"><select id="menu0" aria-label="첫 번째 메뉴"><option value="p0" selected>밤 라테</option><option value="p1">아메리카노</option><option value="p2">카페라테</option><option value="p3">말차 밀크</option><option value="p4">유자차</option><option value="p5">버터 스콘</option><option value="p6">딸기 요거트 스무디</option><option value="p7">망고 스무디</option><option value="p8">블루베리 스무디</option><option value="p9">자몽 에이드</option><option value="p10">레몬 소다</option><option value="p11">복숭아 아이스티</option><option value="p12">바닐라 라테</option><option value="p13">초코 머핀</option></select></th><th scope="col"><select id="menu1" aria-label="두 번째 메뉴"><option value="p0">밤 라테</option><option value="p1" selected>아메리카노</option><option value="p2">카페라테</option><option value="p3">말차 밀크</option><option value="p4">유자차</option><option value="p5">버터 스콘</option><option value="p6">딸기 요거트 스무디</option><option value="p7">망고 스무디</option><option value="p8">블루베리 스무디</option><option value="p9">자몽 에이드</option><option value="p10">레몬 소다</option><option value="p11">복숭아 아이스티</option><option value="p12">바닐라 라테</option><option value="p13">초코 머핀</option></select></th></tr></thead><tbody>
+<tr><th scope="row">열량</th><td class="side0"><span class="p0">285 kcal</span><span class="p1">10 kcal</span><span class="p2">160 kcal</span><span class="p3">210 kcal</span><span class="p4">130 kcal</span><span class="p5">320 kcal</span><span class="p6">245 kcal</span><span class="p7">210 kcal</span><span class="p8">225 kcal</span><span class="p9">155 kcal</span><span class="p10">140 kcal</span><span class="p11">125 kcal</span><span class="p12">205 kcal</span><span class="p13">330 kcal</span></td><td class="side1"><span class="p0">285 kcal</span><span class="p1">10 kcal</span><span class="p2">160 kcal</span><span class="p3">210 kcal</span><span class="p4">130 kcal</span><span class="p5">320 kcal</span><span class="p6">245 kcal</span><span class="p7">210 kcal</span><span class="p8">225 kcal</span><span class="p9">155 kcal</span><span class="p10">140 kcal</span><span class="p11">125 kcal</span><span class="p12">205 kcal</span><span class="p13">330 kcal</span></td></tr>
+<tr><th scope="row">당류</th><td class="side0"><span class="p0">28 g</span><span class="p1">0 g</span><span class="p2">11 g</span><span class="p3">22 g</span><span class="p4">30 g</span><span class="p5">8 g</span><span class="p6">32 g</span><span class="p7">36 g</span><span class="p8">33 g</span><span class="p9">30 g</span><span class="p10">29 g</span><span class="p11">26 g</span><span class="p12">23 g</span><span class="p13">24 g</span></td><td class="side1"><span class="p0">28 g</span><span class="p1">0 g</span><span class="p2">11 g</span><span class="p3">22 g</span><span class="p4">30 g</span><span class="p5">8 g</span><span class="p6">32 g</span><span class="p7">36 g</span><span class="p8">33 g</span><span class="p9">30 g</span><span class="p10">29 g</span><span class="p11">26 g</span><span class="p12">23 g</span><span class="p13">24 g</span></td></tr>
+<tr><th scope="row">단백질</th><td class="side0"><span class="p0">7 g</span><span class="p1">1 g</span><span class="p2">8 g</span><span class="p3">7 g</span><span class="p4">0 g</span><span class="p5">5 g</span><span class="p6">5 g</span><span class="p7">1 g</span><span class="p8">2 g</span><span class="p9">1 g</span><span class="p10">0 g</span><span class="p11">0 g</span><span class="p12">7 g</span><span class="p13">4 g</span></td><td class="side1"><span class="p0">7 g</span><span class="p1">1 g</span><span class="p2">8 g</span><span class="p3">7 g</span><span class="p4">0 g</span><span class="p5">5 g</span><span class="p6">5 g</span><span class="p7">1 g</span><span class="p8">2 g</span><span class="p9">1 g</span><span class="p10">0 g</span><span class="p11">0 g</span><span class="p12">7 g</span><span class="p13">4 g</span></td></tr>
+<tr><th scope="row">카페인</th><td class="side0"><span class="p0">75 mg</span><span class="p1">150 mg</span><span class="p2">75 mg</span><span class="p3">40 mg</span><span class="p4">0 mg</span><span class="p5">0 mg</span><span class="p6">0 mg</span><span class="p7">0 mg</span><span class="p8">0 mg</span><span class="p9">0 mg</span><span class="p10">0 mg</span><span class="p11">18 mg</span><span class="p12">75 mg</span><span class="p13">0 mg</span></td><td class="side1"><span class="p0">75 mg</span><span class="p1">150 mg</span><span class="p2">75 mg</span><span class="p3">40 mg</span><span class="p4">0 mg</span><span class="p5">0 mg</span><span class="p6">0 mg</span><span class="p7">0 mg</span><span class="p8">0 mg</span><span class="p9">0 mg</span><span class="p10">0 mg</span><span class="p11">18 mg</span><span class="p12">75 mg</span><span class="p13">0 mg</span></td></tr>
+</tbody></table></section>
+    </main>
+    <footer>커피숖</footer>
+</body>
+</html>
